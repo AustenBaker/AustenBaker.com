@@ -91,14 +91,11 @@ a{text-decoration: none;}
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
   }
-  .nav > #nav-check:checked ~ .nav-links li{
-    display: flex;
-    align-items: center;
-  }
   .nav > #nav-check:checked ~ .nav-links {
     height: 100px;
     flex-direction: row;
     justify-content: space-evenly;
+    transition: all .25s linear;
   }
   
   .nav > .nav-btn > label > span:nth-child(1) {
