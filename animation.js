@@ -1,33 +1,38 @@
-var wrapper = document.querySelectorAll('.loader-wrapper');
-var loader = document.querySelectorAll('.loader');
-var circle = document.querySelectorAll('.circle');
+var wrapper = document.querySelector('.loader-wrapper');
 
-//slide up
-anime({
-  targets: wrapper,
-  translateY: '-180%',
-  duration: 600,
-  delay: 1000,
-  easing: 'linear',
-});
 
-//fade
-anime({
-  targets: wrapper,
-  opacity: 0,
-  duration: 600,
-  delay: 1000,
-  easing: 'linear',
-});
+const fragment = document.createDocumentFragment();
+const grid = [10, 1];
+const col = grid[0];
+const row = grid[1];
+const numberOfElements = col * row;
 
-anime({
-  targets: circle,
-  width: "80%",
-  direction: 'alternate',
+for (let i = 0; i < numberOfElements; i++) {
+  fragment.appendChild(document.createElement('div'));
+}
+
+wrapper.appendChild(fragment);
+
+const staggersAnimation = anime.timeline({
+  targets: '.loader-wrapper div',
   easing: 'linear',
-  duration: 1600,
-  opacity: 0,
+  delay: anime.stagger(10),
   loop: false,
-  borderRadius: 50,
-});
+  autoplay: false
+})
+.add({
+  rotate: 180,
+  duration: 400,
+  scale: 0.2,
+})
+.add({
+  scaleY: 20,
+  duration: 400,
+})
+.add({
+  scaleX: 10,
+  duration: 200,
+})
 
+
+staggersAnimation.play();
