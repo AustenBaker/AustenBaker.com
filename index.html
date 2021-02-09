@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
 <head>
   <title>Austen Baker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -27,7 +29,9 @@
     </label>
   </div>
   <ul class="nav-links">
-    <li><a href="#projects-section">projects</a></li>
+    <li>
+      <a href="#projects-section">projects</a>
+    </li>
     <li>
       <a href="https://github.com/AustenBaker" target="_blank">
         <i class="fab fa-github" ></i>
@@ -48,12 +52,11 @@
 <!--NavBar-->
 
 <!--LandingPage-->
-<section id="landing-section" class="landing-section">
-
+<section id="landing-section">
   <div id="header-container">
     <div id="header-background">
       <div id="title-container">
-        <img class="UWIMG" src="./resources//images/uw.png" />
+        <img class="UWIMG" src="./resources//images/uw.png" alt="University of Wisconsin-Madison" />
         <p id="title">Web Developer</p>
         <div id="skills-images-group" class="skills-images-group">
             <i class="fab fa-html5 skill-element"></i>
@@ -66,44 +69,38 @@
       </div>
     </div>
   </div>
-
 </section>
 <!--LandingPage-->
 
 <!--PROJECTS SECTION-->
 <section id="projects-section">
-
   <div class="project">
-    <a href="https://react-omdb-search.herokuapp.com/">
-      <div class="project-overlay-container img1">
-        <div class="project-icon-container">
-          <i class="fab fa-react project-icon"></i>
-          <i class="fab fa-node project-icon"></i>
-          <i class="fab fa-html5 project-icon"></i>
-          <i class="fab fa-css3 project-icon"></i>
-          <i class="fab fa-js project-icon"></i>
-        </div>
-      </div>
-      <div>
-        <a class="project-btn" href="https://github.com/AustenBaker/React-Movie-Search">GITHUB CODE</a>
-        <a class="project-btn" href="https://react-omdb-search.herokuapp.com/">LIVE DEMO</a>
+    <a href="https://react-omdb-search.herokuapp.com/" class="project-overlay-container img1">
+      <div class="project-icon-container">
+        <i class="fab fa-react project-icon"></i>
+        <i class="fab fa-node project-icon"></i>
+        <i class="fab fa-html5 project-icon"></i>
+        <i class="fab fa-css3 project-icon"></i>
+        <i class="fab fa-js project-icon"></i>
       </div>
     </a>
+    <div class="project-btn-container">
+      <a class="project-btn" href="https://github.com/AustenBaker/React-Movie-Search">GITHUB CODE</a>
+      <a class="project-btn" href="https://react-omdb-search.herokuapp.com/">LIVE DEMO</a>
+    </div>
   </div>
 
   <div class="project">
-    <a href="#" onclick="alert('You are already here!');">
-      <div class="project-overlay-container img2">
+      <a href="#" class="project-overlay-container img2" onclick="alert('You are already here!');">
         <div class="project-icon-container">
           <i class="fab fa-html5 project-icon"></i>
           <i class="fab fa-css3 project-icon"></i>
           <i class="fab fa-js project-icon"></i>
         </div>
-      </div>
-      <div>
-        <a class="project-btn" href="https://github.com/AustenBaker/austenbaker.com2">GITHUB CODE</a>
-      </div>
-    </a>
+      </a>
+    <div class="project-btn-container">
+      <a class="project-btn" href="https://github.com/AustenBaker/austenbaker.com2">GITHUB CODE</a>
+    </div>
   </div>
 </div>
 
