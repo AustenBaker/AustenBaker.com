@@ -1,0 +1,27 @@
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    background-color: #000;
+    align-items: center;
+    align-self: center;
+}
+
+.circle {
+    border: 10px solid white;
+    height: 0px;
+    width: 0px;
+}

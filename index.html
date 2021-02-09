@@ -1,0 +1,138 @@
+<head>
+  <title>Austen Baker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+ <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/loader.css">
+  <script src="/resources/js/jquery-3.5.1.js"></script>
+  <script src="/resources/js/anime.min.js"></script>
+
+</head>
+<!--NavBar-->
+<nav class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="name"><a href="#landing-section">Austen Baker</a></div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#projects-section">projects</a></li>
+    <li>
+      <a href="https://github.com/AustenBaker" target="_blank">
+        <i class="fab fa-github" ></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/austenbaker/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:austenbaker225@gmail.com"  target="_blank">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!--NavBar-->
+
+<!--LandingPage-->
+<section id="landing-section" class="landing-section">
+
+  <div id="header-container">
+    <div id="header-background">
+      <div id="title-container">
+        <img class="UWIMG" src="./resources//images/uw.png" />
+        <p id="title">Web Developer</p>
+        <div id="skills-images-group" class="skills-images-group">
+            <i class="fab fa-html5 skill-element"></i>
+            <i class="fab fa-css3 skill-element"></i>
+            <i class="fab fa-js skill-element"></i>
+            <i class="fab fa-node skill-element"></i>
+            <i class="fab fa-react skill-element"></i>
+        </div>
+        <button id="hire-me-button">HIRE ME!</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!--LandingPage-->
+
+<!--PROJECTS SECTION-->
+<section id="projects-section">
+  <div class="project">
+    <div class="project-overlay-container img1">
+      <div class="project-icon-container">
+        <i class="fab fa-react project-icon"></i>
+        <i class="fab fa-node project-icon"></i>
+        <i class="fab fa-html5 project-icon"></i>
+        <i class="fab fa-css3 project-icon"></i>
+        <i class="fab fa-js project-icon"></i>
+      </div>
+    </div>
+
+    <div>
+      <a class="project-btn" href="https://github.com/AustenBaker/React-Movie-Search">GITHUB CODE</a>
+      <a class="project-btn" href="https://react-omdb-search.herokuapp.com/">LIVE DEMO</a>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-overlay-container img2">
+      <div class="project-icon-container">
+        <i class="fab fa-html5 project-icon"></i>
+        <i class="fab fa-css3 project-icon"></i>
+        <i class="fab fa-js project-icon"></i>
+      </div>
+    </div>
+      <div>
+        <a class="project-btn" href="https://github.com/AustenBaker/austenbaker.com">GITHUB CODE</a>
+      </div>
+  </div>
+</div>
+
+</section>
+<!--PROJECTS SECTION-->
+
+<!--FOOTER SECTION-->
+<section id="footer-section">
+  <div id="footer-container">
+    <a href="https://www.linkedin.com/in/austenbaker/" target="_blank">
+      <i class="fab fa-linkedin footer-icon"></i>
+    </a>
+    <a href="https://github.com/AustenBaker/" target="_blank">
+      <i class="fab fa-github footer-icon"></i>
+    </a>
+    <a href="mailto:austenbaker225@gmail.com"  target="_blank">
+      <i class="fa fa-envelope footer-icon"></i>
+    </a>
+  </div>
+</section>
+<!--FOOTER SECTION-->
+
+<!--LOADER-->
+<div class="loader-wrapper">
+  <span class="loader">
+    <div class="circle"></div>
+    <div class="bar"></div>
+  </span>
+</div>
+<script>
+  $(window).on("load",function(){
+    $(".loader-wrapper").delay(2000).fadeOut(1);
+  });
+</script>
+<script src="animation.js"></script>
+<!--LOADER-->
