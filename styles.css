@@ -1,0 +1,179 @@
+:root {
+  --pink: #FF6584;
+  --darkgrey: #3f3d56;
+  --lightgrey: #C4C4C4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+a{ text-decoration: none;}
+
+
+#links{
+  text-align: center;
+  padding-top: 10px;
+}
+.svg-icon{
+  fill: var(--darkgrey);
+  height: 40px;
+  width: 40px;
+  padding-right: 10px;
+}
+.svg-icon:hover{
+  fill: black;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--pink);
+}
+#logo{
+  display: inline-block;
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+}
+#nav-links{
+  display: flex;
+  list-style: none;
+  padding-right: 20px;
+}
+.nav-item{
+  display: inline-block;
+  padding: 20px 10px;
+  text-decoration: none;
+  color: white;
+}
+.nav-item:hover{
+  background-color: var(--darkgrey);
+}
+
+
+#hero{
+  height: 600px;
+  padding: 25px 25px 0px 25px;
+}
+#hero-background{
+  height: 400px;
+  background-color: var(--pink);
+}
+header{
+  text-align: center;
+  padding-top: 50px;
+}
+h1{
+  font-size: 36px;
+  color: white;
+}
+h2{
+  font-size: 28px;
+  color: white;
+}
+#hero-svg{
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  top: 225px;
+  left: 0;
+}
+
+
+#projects{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+.project-container{
+  text-align: center;
+  padding-bottom: 50px;
+}
+.project-desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h3{
+  font-size: 28px;
+  color: var(--pink);
+}
+.project-text{
+  padding-top: 10px;
+  max-width: 400px;
+  margin: 0px auto;
+}
+.skill-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+.skill-item{
+  display: inline;
+  list-style: none;
+  background-color: var(--lightgrey);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.project-img{
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: .25s;
+  cursor: pointer;
+}
+.project-img:hover{
+  transform: scale(1.05);
+}
+
+
+
+@media only screen and (min-width: 992px) {
+  #hero{
+    padding: 50px 50px 0px 50px;
+  }
+  header{
+    text-align: left;
+    padding-left: 50px;
+  }
+  h1{
+    font-size: 48px;
+  }
+  h2{
+    font-size: 36px;
+  }
+  #links{
+    text-align: left;
+    padding-left: 50px;
+  }
+  #hero-svg{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: auto;
+    height: 550px;
+    width: auto;
+    padding: 0px 20px;
+  }
+
+  #projects{
+    align-items: center;
+    padding: 0px 100px;
+  }
+  .project-container{
+    display: flex;
+    text-align: center;
+    width: 900px;
+    justify-content: space-between;
+  }
+  .project-img{
+    max-width: 400px;
+  }
+}
