@@ -10,5 +10,4 @@ toggle.onchange = function() {
     }
 
     document.documentElement.setAttribute('data-theme', targetTheme)
-    localStorage.setItem('theme', targetTheme);
 };
