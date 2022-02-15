@@ -1,3 +1,3 @@
 Initial Figma Wireframe
 
-<img src="resources/jpgs/portfolio.jpg" alt="Portfolio" />
+![temp](https://github.com/AustenBaker/austenbaker.com/blob/master/resources/jpgs/portfolio.jpg?raw=true)
