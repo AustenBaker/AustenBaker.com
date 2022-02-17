@@ -7,6 +7,7 @@
 <body>
   <section id="hero">
     <div id="hero-background">
+      <canvas id="canvas"></canvas>
       <header>
         <div>
           <h1>Austen Baker</h1>
@@ -34,18 +35,17 @@
   </section>
   <section id="projects">
     <article class="project-container">
-      <a href="https://react-tmdb-search.herokuapp.com/">
+      <a href="https://austenbaker.github.io/TMDb-React-Client/#/">
         <img class="project-img" src="./resources/jpgs/reactmoviesearch.jpg">
       </a>
       <div class="project-desc">
         <h3>React Movie Search</h3>
-        <p class="project-text">Search for any movie you would like. View popular, trending, and top rated movies on the homepage. Click on a movie to see more box office numbers, actors/actresses, genres, and more. Created with React.js on the frontend with an Express backend making calls to TMDb API endpoints. </p>
+        <p class="project-text">Search and find new movies to watch. Frontend client created with React and uses axios GET requests from TMDb API to get data. </p>
         <ul class="skill-list">
           <li class="skill-item">javascript</li>
           <li class="skill-item">react</li>
           <li class="skill-item">react-router</li>
-          <li class="skill-item">nodejs</li>
-          <li class="skill-item">express</li>
+          <li class="skill-item">axios</li>
         </ul>
       </div>
     </article>
@@ -54,15 +54,17 @@
       <img class="project-img" src="./resources/jpgs/portfolio.jpg">
       <div class="project-desc">
         <h3>Personal Portfolio Site</h3>
-        <p class="project-text">This site was created using semantic HTML, in-line SVGs, and CSS. It is used to showcase projects I have worked on.</p>
+        <p class="project-text">This site was created using semantic HTML, mobile first, responsive design, in-line SVGs, and CSS. It is used to showcase projects I have worked on.</p>
         <ul class="skill-list">
           <li class="skill-item">html</li>
           <li class="skill-item">css</li>
+          <li class="skill-item">javascript</li>
         </ul>
       </div>
     </article>
   </section>
 
   <script src="./lightdarkmode.js" ></script>
+  <script src="./particles.js" ></script>
 </body>
 </html>
