@@ -1,4 +1,4 @@
-NUM_PARTICLES = 120;
+NUM_STARS = 120;
 NUM_MOONS = 5;
 
 canvas = document.getElementById("canvas");
@@ -6,10 +6,10 @@ ctx = canvas.getContext("2d");
 container = document.getElementById("hero-background");
 canvas.width = container.offsetWidth;
 canvas.height = container.offsetHeight;
-var particles = [];
+var stars = [];
 var moons = [];
 
-var Particle = function() {
+var Star = function() {
   this.x = canvas.width * Math.random();
   this.y = canvas.height * Math.random();
   this.vx = 0.25 * (Math.random());
@@ -18,29 +18,31 @@ var Particle = function() {
   this.size = 1 + (Math.random() * 1.5);
 }
 
-Particle.prototype.Draw = function(ctx) {
+Star.prototype.Draw = function(ctx) {
   ctx.fillStyle = this.Color;
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, true);
   ctx.fill();
 }
 
-Particle.prototype.Update = function() {
+Star.prototype.Update = function() {
+  // update position
   this.x += this.vx;
   this.y += this.vy;
   
-  if(this.x < 0) {
+  // keep position within the canvas
+  if ( this.x < 0 ) {
     this.x = canvas.width * 1;
-  } else if(this.x > canvas.width) {
+  } else if ( this.x > canvas.width ) {
     this.x = 0;
-  }
-  
-  if(this.y < 0) {
+  } else if ( this.y < 0) {
     this.y = canvas.height * 1;
-  } else if(this.y > canvas.height) {
+  } else if ( this.y > canvas.height ) {
     this.y = 0;
   }
 }
+
+
 
 var Moon = function() {
   this.x = canvas.width * Math.random();
@@ -54,40 +56,40 @@ var Moon = function() {
 Moon.prototype.Draw = function(ctx) {
   ctx.fillStyle = this.Color;
   ctx.beginPath();
-  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, true);
+  ctx.arc( this.x, this.y, this.size, 0, Math.PI * 2, true );
   ctx.fill();
 }
 
-
 Moon.prototype.Update = function() {
+  // update position
   this.x += this.vx;
   this.y += this.vy;
   
-  if(this.x < 0) {
+  // keep position within the canvas
+  if ( this.x < 0 ) {
     this.x = canvas.width * 1;
-  } else if(this.x > canvas.width) {
+  } else if ( this.x > canvas.width ) {
     this.x = 0;
-  }
-  
-  if(this.y < 0) {
+  } else if ( this.y < 0) {
     this.y = canvas.height * 1;
-  } else if(this.y > canvas.height) {
+  } else if ( this.y > canvas.height ) {
     this.y = 0;
   }
 }
 
 
 
-
-
+// animation loop
 function loop() {
   ctx.clearRect(0,0, canvas.width, canvas.height);
-  if(particles.length > 0) {
-    for(var i = 0; i < NUM_PARTICLES; i++) {
-      particles[i].Update();
-      particles[i].Draw(ctx);
+
+  if(stars.length > 0) {
+    for(var i = 0; i < NUM_STARS; i++) {
+      stars[i].Update();
+      stars[i].Draw(ctx);
     }
   }
+
   if(moons.length > 0 ) {
     for(var i = 0; i < NUM_MOONS; i++) {
       moons[i].Update();
@@ -97,8 +99,9 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
-for (var i = 0; i < NUM_PARTICLES; i++) {
-  particles.push(new Particle());
+// populate arrays
+for (var i = 0; i < NUM_STARS; i++) {
+  stars.push(new Star());
 }
 
 for (var i = 0; i <  NUM_MOONS; i++) {
